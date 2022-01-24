@@ -1,0 +1,27 @@
+$font-stack-Overpass: "Overpass", Arial, Helvetica, sans-serif;
+$font-stack-Ubuntu: "Ubuntu", Arial, Helvetica, sans-serif;
+
+$max-width: 68.75rem;
+$border-radius: 100px;
+$box-shadow: 0 5px 15px rgba(0, 0, 0, 0.212);
+$padding: 2em;
+
+$font-weight: (
+    light: 300,
+    regular: 400,
+    medium: 500,
+    semi-bold: 600,
+    bold: 700,
+);
+
+$colors: (
+    primary-light-red: hsl(356, 100%, 66%),
+    primary-very-light-red: hsl(355, 100%, 74%),
+    primary-very-dark-blue: hsl(208, 49%, 24%),
+    neutral-white: hsl(0, 0%, 100%),
+    neutral-footer-text: hsl(240, 2%, 79%),
+    neutral-body-copy: hsl(207, 13%, 34%),
+    neutral-footer-background: hsl(240, 10%, 16%),
+    background-gradient-VeryDarkGrayBlue: hsl(237, 17%, 21%),
+    background-gradient-VeryDarkDesaturatedBlue: hsl(237, 23%, 32%),
+);

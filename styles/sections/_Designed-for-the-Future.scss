@@ -1,0 +1,87 @@
+.designed-for-the-future--container {
+    @include flexCenter;
+    // background: rgba(255, 192, 203, 0.411);
+    overflow: hidden;
+    padding: 10em $padding 17em $padding;
+    max-height: rem(1000px);
+
+    @include mobileSize {
+        padding: 5em 0 22em 0;
+        max-height: unset;
+    }
+
+    @media only screen and (max-width: 425px) {
+        padding: 5em 0 17em 0;
+    }
+
+    // this wraps the h2 + info and image
+    .disigned-for-the-future--wrap {
+        width: 100%;
+        max-width: $max-width;
+        display: flex;
+        flex-direction: column;
+        // margin-top: 5em;
+
+        .designed__h2 {
+            text-align: center;
+            font-size: clamp(rem(26px), 6vw, rem(36px));
+            color: color(primary-very-dark-blue);
+        }
+
+        //this wraps the info and the image containers
+        .designed-content--wrap {
+            display: flex;
+            margin-top: 7em;
+            height: auto;
+
+            @include mobileSize {
+                flex-direction: column-reverse;
+                margin-top: 2em;
+            }
+
+            //this wraps the text portion of the section
+            .designed-content__info--wrap {
+                width: 100%;
+                // padding-right: 4em;
+
+                @include mobileSize {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 0 2.47em;
+                }
+            }
+
+            //this holds the image
+            .info__img--container {
+                position: relative;
+                width: 100%;
+
+                @include mobileSize {
+                    display: grid;
+                    place-items: center;
+                }
+                .info__img {
+                    position: absolute;
+                    transform: translate(10%, -26.5%);
+                    max-width: rem(900px);
+
+                    @include mobileSize {
+                        display: none;
+                    }
+                }
+
+                .info__img--mobile {
+                    display: none;
+
+                    @include mobileSize {
+                        display: block;
+                        width: 100%;
+                        max-width: rem(550px);
+                        margin-bottom: 2em;
+                    }
+                }
+            }
+        }
+    }
+}

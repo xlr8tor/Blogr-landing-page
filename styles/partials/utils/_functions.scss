@@ -1,0 +1,11 @@
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+@function fontWeight($weight) {
+    @return map-get($font-weight, $weight);
+}
+
+@function rem($size) {
+    @return $size / 16px * 1rem;
+}

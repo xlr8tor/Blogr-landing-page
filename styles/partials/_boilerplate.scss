@@ -1,0 +1,43 @@
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    // outline: solid red 1px;
+}
+img {
+    display: block;
+}
+
+li {
+    list-style-type: none;
+}
+
+ul,
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: $font-stack-Overpass;
+}
+
+body {
+    font-size: rem(16px);
+    font-family: $font-stack-Overpass;
+    min-height: 100%;
+    background: #fafafa;
+}

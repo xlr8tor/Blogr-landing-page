@@ -1,0 +1,75 @@
+.state-of-the-art--container {
+    background: linear-gradient(to right, rgb(44, 45, 63), rgb(63, 65, 100)),
+        url("../images/bg-pattern-circles.svg") no-repeat;
+
+    background-blend-mode: lighten;
+    background-position: -50% 80%;
+    padding: 0 $padding;
+    display: flex;
+    justify-content: center;
+    border-radius: 0 $border-radius 0 $border-radius;
+    height: rem(400px);
+
+    @include mobileSize {
+        height: rem(600px);
+        // margin-top: 5em;
+        padding: 0 0 7em 0;
+        background-size: cover;
+        background-position: 49% -250px;
+    }
+    .text-and-image--wrap {
+        // outline: solid red 2px;
+        max-width: $max-width;
+        display: flex;
+
+        @include mobileSize {
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .state-of-the-art__img--wrap {
+            position: relative;
+            width: 100%;
+
+            .state-of-the-art__img {
+                // position: absolute;
+                // bottom: rem(-225px);
+                right: rem(55px);
+                position: relative;
+                bottom: rem(70px);
+
+                @media only screen and (max-width: 1150px) {
+                    // display: none;
+
+                    bottom: rem(72px);
+                    right: rem(30px);
+                    // transform: translate(13%, 25%);
+                }
+
+                @include mobileSize {
+                    width: 100%;
+                    position: absolute;
+                    right: 0;
+                    bottom: rem(5px);
+                    // transform: translateY(-225px);
+                    // min-width: 375px;
+                }
+            }
+        }
+
+        .state-of-the-art__info--wrap {
+            width: 100%;
+            color: color(neutral-white);
+            @include flexCenter(column);
+            align-items: flex-start;
+
+            @include mobileSize {
+                padding: 0 $padding;
+                text-align: center;
+            }
+            .info__h2 {
+                font-size: rem(36px);
+            }
+        }
+    }
+}

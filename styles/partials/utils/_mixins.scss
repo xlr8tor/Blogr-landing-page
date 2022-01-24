@@ -1,0 +1,49 @@
+@mixin background-Gradient-Red {
+    background-image: url("../images/bg-pattern-intro.svg"),
+        linear-gradient(
+            to right,
+            hsla(13, 100%, 72%, 1),
+            hsla(353, 100%, 62%, 1)
+        );
+
+    // background-size: cover, 300%;
+    background-repeat: no-repeat;
+    background-position: 26% 52%, center;
+}
+
+@mixin background-Gradient-Red-Mobile {
+    background-image: linear-gradient(
+            to right,
+            hsla(13, 100%, 72%, 0.9),
+            hsla(353, 100%, 62%, 0.9)
+        ),
+        url("../images/bg-pattern-intro.svg");
+
+    background-size: cover, 350%;
+    background-repeat: no-repeat;
+    background-position: center, 35% 34%;
+}
+
+@mixin background-Gradient-DarkBlue {
+    background: linear-gradient(hsl(237, 17%, 21%), hsl(237, 23%, 32%))
+        no-repeat;
+}
+
+@mixin flexCenter($direction: row) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin mobileSize {
+    @media only screen and (max-width: 950px) {
+        @content;
+    }
+}
+
+@mixin desktopSize {
+    @media only screen and (min-width: 950px) {
+        @content;
+    }
+}
